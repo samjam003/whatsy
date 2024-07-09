@@ -1,0 +1,161 @@
+<%- include('./static/header.ejs') %>
+
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/forms/wizard.css">
+    <!-- END: Page CSS-->
+
+
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h2 class="content-header-title float-left mb-0">Bulk Messanger</h2>
+                            <div class="breadcrumb-wrapper col-12">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Send Bulk Messages</a>
+                                    </li>
+                                    <!-- <li class="breadcrumb-item"><a href="#">Forms</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Form Wizard
+                                    </li> -->
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
+                    <div class="form-group breadcrum-right">
+                        <div class="dropdown">
+                            <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                    class="feather icon-settings"></i></button>
+                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Chat</a><a
+                                    class="dropdown-item" href="#">Email</a><a class="dropdown-item"
+                                    href="#">Calendar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Form wizard with step validation section start -->
+            <section id="validation">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title"></h4>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <form class="steps-validation wizard-circle" action="/message" method="post">
+                                        <!-- Step 1 -->
+                                        <h6><i class="step-icon feather icon-file-text"></i> Select Template</h6>
+                                        <fieldset>
+
+
+                                            <div class="row">
+
+
+                                                <div class="col-md-10">
+                                                    <div class="form-group">
+                                                        <label for="template">
+                                                            Select Template
+                                                        </label>
+                                                        <select class="custom-select form-control" id="template"
+                                                            name="template">
+                                                            <option value="hello_world">Hello</option>
+                                                            <option value="thanks">Thanks</option>
+                                                            <option value="welcome">Welcome</option>
+                                                            <option value="feedback">feedback</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                        <!-- Step 2
+                                        <h6><i class="step-icon feather icon-briefcase"></i> Step 2</h6>
+                                        <fieldset>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="proposalTitle3">
+                                                            Proposal Title
+                                                        </label>
+                                                        <input type="text" class="form-control required"
+                                                            id="proposalTitle3" name="proposalTitle">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="jobTitle5">
+                                                            Job Title
+                                                        </label>
+                                                        <input type="text" class="form-control required" id="jobTitle5"
+                                                            name="jobTitle">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="shortDescription3">Short Description</label>
+                                                        <textarea name="shortDescription" id="shortDescription3"
+                                                            rows="4" class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset> -->
+
+                                        <!-- Step 3 -->
+                                        <h6><i class="step-icon feather icon-image"></i> Step 3</h6>
+                                        <fieldset>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group  
+                                                    ">
+                                                        <label for="proposalTitle3">
+                                                            phone
+                                                        </label>
+                                                        <input type="tel" class="form-control required" id="phone"
+                                                            name="phone">
+                                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Form wizard with step validation section end -->
+
+        </div>
+    </div>
+    </div>
+    <!-- END: Content-->
+    <!-- BEGIN: Vendor JS-->
+    <script src=" /app-assets/vendors/js/vendors.min.js">
+    </script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="/app-assets/vendors/js/ui/jquery.sticky.js"></script>
+    <script src="/app-assets/vendors/js/extensions/jquery.steps.min.js"></script>
+    <script src="/app-assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
+    <!-- END: Page Vendor JS-->
+
+
+
+
+    <!-- BEGIN: Page JS-->
+    <script src="/app-assets/js/scripts/forms/wizard-steps.js"></script>
+    <!-- END: Page JS-->
+
+    <%- include('./static/footer.ejs') %>
